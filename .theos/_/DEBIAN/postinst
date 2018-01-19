@@ -1,0 +1,10 @@
+declare -a cydia
+cydia=($CYDIA)
+
+if [[ ${CYDIA+@} ]]; then
+        eval "echo 'finish:restart' >&${cydia[0]}"
+else
+        echo "Please reboot your device after this!"
+fi
+
+exit 0
