@@ -20,6 +20,10 @@ include $(THEOS_MAKE_PATH)/tweak.mk
 after-install::
 	install.exec "killall -9 QQ"
 before-package::
-		cp ./bin/postinst ./.theos/_/DEBIAN/
-		cp ./bin/postrm ./.theos/_/DEBIAN/
-		cp ./control ./.theos/_/DEBIAN/
+	cp ./bin/postinst ./.theos/_/DEBIAN/
+	cp ./bin/postrm ./.theos/_/DEBIAN/
+	cp ./control ./.theos/_/DEBIAN/
+i::
+	make
+	make package
+	make install

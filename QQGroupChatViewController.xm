@@ -1,0 +1,464 @@
+%hook QQGroupChatViewController
++ (_Bool)isValidTroopMember:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
++ (void)loadAddGroupMsgConfig { %log; %orig; }
++ (void)loadGlobalGroupChatLevelIcon { %log; %orig; }
++ (void)onGroupRankLabelTouchWithNav:(id)arg1 groupUin:(id)arg2 clkUin:(id)arg3 clkNick:(id)arg4 isDeliverGiftFlag:(_Bool)arg5 source:(id)arg6 { %log; %orig; }
++ (void)onGroupTitleOrNickLabelTouchWithNav:(id)arg1 groupUin:(id)arg2 targetUin:(id)arg3 targetNick:(id)arg4 targetType:(int)arg5 source:(id)arg6 { %log; %orig; }
++ (void)onSelectedSendFlwMember:(id)arg1 nav:(id)arg2 groupCode:(id)arg3 isDeliverGiftFromInput:(_Bool)arg4 { %log; %orig; }
++ (void)openGroupDeliverGiftWithVC:(id)arg1 groupCode:(id)arg2 isDeliverGiftFromInput:(_Bool)arg3 { %log; %orig; }
++ (void)openGroupHomeworkWithNav:(id)arg1 uin:(id)arg2 { %log; %orig; }
++ (void)presentGroupMemListViewControllerForDeliverGiftWithNotiHandle:(id)arg1 groupCode:(id)arg2 isDeliverGiftFromInput:(_Bool)arg3 { %log; %orig; }
+- (void)AIOFirstInMessageLoadedFinished { %log; %orig; }
+- (id)AIONotifyControlUserData { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)AIOback { %log; %orig; }
+- (void)ActionDismissGroupRespond:(id)arg1 { %log; %orig; }
+- (void)ActionExitGroupResult:(id)arg1 { %log; %orig; }
+- (void)ActionGroupApp:(int)arg1 { %log; %orig; }
+- (void)ActionGroupHomework { %log; %orig; }
+- (void)ActionQQInviteJoinGroupResult:(id)arg1 { %log; %orig; }
+- (void)BeginDraggingInTableView { %log; %orig; }
+- (void)BeginDraggingInTableView:(id)arg1 { %log; %orig; }
+- (void)BeginScrollInTableView:(id)arg1 { %log; %orig; }
+- (void)EndDraggingInTableView:(id)arg1 speed:(double)arg2 byUser:(_Bool)arg3 { %log; %orig; }
+- (void)EndScrollBySetContenOffset:(id)arg1 { %log; %orig; }
+- (void)EndScrollInTableView:(id)arg1 { %log; %orig; }
+- (void)EndScrollToTopTableView:(id)arg1 { %log; %orig; }
+- (void)GetMemberRemarkNotify:(id)arg1 list:(id)arg2 { %log; %orig; }
+- (void)GetMemberRemarkSucc:(id)arg1 remark:(id)arg2 { %log; %orig; }
+- (void)GroupEndDraggingInTableView:(id)arg1 speed:(double)arg2 byUser:(_Bool)arg3 { %log; %orig; }
+- (void)HandleArkBannerTipIsAppear:(_Bool)arg1 { %log; %orig; }
+- (void)HandleGroupAudioTips { %log; %orig; }
+- (void)OnDraggingInTableView:(id)arg1 { %log; %orig; }
+- (void)QQAIOShareMessageCellDidAction:(id)arg1 aioModel:(id)arg2 { %log; %orig; }
+- (void)QQAIOTribeTopicMessageCellDidAction:(id)arg1 aioModel:(id)arg2 { %log; %orig; }
+- (void)QQMultiImagePickerController:(id)arg1 didSelectPhotoList:(id)arg2 send2SelectTroopAlbum:(id)arg3 { %log; %orig; }
+- (void)QQRecentPicPreviewDidSelectPhoto:(id)arg1 { %log; %orig; }
+- (void)QQRecentPicPreviewUploadTroopAlbumDidClick:(id)arg1 feedModel:(id)arg2 willSendOriPic:(_Bool)arg3 { %log; %orig; }
+- (void)QQSetDWORD:(char *)arg1 from:(unsigned int)arg2 { %log; %orig; }
+- (void)QQSetWORD:(char *)arg1 from:(unsigned short)arg2 { %log; %orig; }
+- (void)actionAIOGroupQuitAnonymousMode:(id)arg1 { %log; %orig; }
+- (void)actionDeliveGiftSuccess:(id)arg1 { %log; %orig; }
+- (void)actionInputbarCamera:(id)arg1 { %log; %orig; }
+- (void)actionInputbarEmotion:(id)arg1 { %log; %orig; }
+- (void)actionInputbarMore:(id)arg1 { %log; %orig; }
+- (void)actionInputbarPTT:(id)arg1 { %log; %orig; }
+- (void)actionInputbarPTV:(id)arg1 { %log; %orig; }
+- (void)actionInputbarPhoto:(id)arg1 { %log; %orig; }
+- (void)actionInputbarRedPack:(id)arg1 { %log; %orig; }
+- (void)actionInputbarRobotPanel:(id)arg1 { %log; %orig; }
+- (void)actionOpenGroupTribeTopic { %log; %orig; }
+- (void)actionReply:(id)arg1 { %log; %orig; }
+- (void)actionSettingGroupAnonymousMode:(id)arg1 { %log; %orig; }
+- (void)addMsgToCache:(id)arg1 { %log; %orig; }
+- (void)addQuoteMsAtInfo:(id)arg1 { %log; %orig; }
+- (void)addRedPointToRightBtn { %log; %orig; }
+- (void)addRobotNickNameToInputView:(_Bool)arg1 { %log; %orig; }
+// - (void)setAioBackgroundGiftView:(QQVideoAnimationView *)aioBackgroundGiftView { %log; %orig; }
+// - (QQVideoAnimationView *)aioBackgroundGiftView { %log; QQVideoAnimationView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+// - (void)setAioBgPlayerView:(MLPlayerView *)aioBgPlayerView { %log; %orig; }
+// - (MLPlayerView *)aioBgPlayerView { %log; MLPlayerView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+// - (QQAIOEventDispatcher *)aioEventDispatcher { %log; QQAIOEventDispatcher * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)alertView:(id)arg1 clickedButtonAtIndex:(long long)arg2 { %log; %orig; }
+- (_Bool)allowPublicGiftOfGiftSelectionView:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)anonymousHeadTouched:(id)arg1 { %log; %orig; }
+- (_Bool)appendAtTextWithRichMsg:(id)arg1 showText:(id)arg2 uuid:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)appendMessage:(id)arg1 shouldReloadData:(_Bool)arg2 shouldScrollToEndWithAnimation:(_Bool)arg3 { %log; %orig; }
+- (void)asyncGetTroopMemFromDbIfNeeded { %log; %orig; }
+- (void)asyncLoadGroupConfigInfo { %log; %orig; }
+- (void)asyncSendImageWithAssetArray:(id)arg1 { %log; %orig; }
+- (void)setAtMemberUin:(unsigned long long )atMemberUin { %log; %orig; }
+- (unsigned long long )atMemberUin { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)setAtNickName:(NSString *)atNickName { %log; %orig; }
+- (NSString *)atNickName { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setBAnonymousMode:(_Bool )bAnonymousMode { %log; %orig; }
+- (_Bool )bAnonymousMode { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool )bShowGroupNotice { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)bannerArkBannerTipViewDidClick:(id)arg1 { %log; %orig; }
+- (void)bannerButtonDidClick:(id)arg1 atIndex:(int)arg2 { %log; %orig; }
+- (void)bannerTipViewDidClick:(id)arg1 { %log; %orig; }
+- (void)bannerTipViewShowStateChange:(id)arg1 showState:(_Bool)arg2 { %log; %orig; }
+// - (CDUnknownBlockType)blockForCheckNoticeRemind:(id)arg1 { %log; CDUnknownBlockType r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+- (void)bulletinViewClose { %log; %orig; }
+- (void)buttonClick:(id)arg1 atIndex:(int)arg2 { %log; %orig; }
+- (void)cacheGroupTipsPushNotification:(id)arg1 { %log; %orig; }
+- (void)cacheTopicConfig:(id)arg1 { %log; %orig; }
+- (_Bool)canRequestMsgSilent { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)cancelAIOShutup { %log; %orig; }
+- (void)chatViewScrollToEnd { %log; %orig; }
+- (_Bool)checkGroupMemberShutupPush { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)checkGroupSeq { %log; %orig; }
+- (void)checkIfHasAtRobot { %log; %orig; }
+- (void)checkIfUpdateFromDiscuss { %log; %orig; }
+- (_Bool)checkNewsNotify { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (int)checkNoticeRemind { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)checkNotifyMsg { %log; %orig; }
+- (_Bool)checkRemindMsg { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)checkSeqMsgVisible:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)checkTopNotifyCloseLogic:(long long)arg1 { %log; %orig; }
+- (void)checkTroopMemberExpireTime { %log; %orig; }
+- (_Bool)checkUnreadMsg { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)clearLocalGroupData { %log; %orig; }
+- (void)closeAndshowChatViewNotifyForMsgKeyword:(id)arg1 { %log; %orig; }
+- (void)closeChatViewNotify { %log; %orig; }
+- (void)createGroupUnreadNotifyControl { %log; %orig; }
+- (void)createTopNotifyControl { %log; %orig; }
+- (void)dataReportJumpToTopic:(_Bool)arg1 { %log; %orig; }
+- (void)dealloc { %log; %orig; }
+- (void)deallocAnonymous { %log; %orig; }
+- (void)deallocForCreditLevel { %log; %orig; }
+- (void)delQuoteMsgModel { %log; %orig; }
+- (void)delayUploadLocalFile:(id)arg1 { %log; %orig; }
+- (void)didAtSelectedMember:(id)arg1 { %log; %orig; }
+- (void)didClickGrayTail:(id)arg1 { %log; %orig; }
+- (void)didClickNextButton:(id)arg1 { %log; %orig; }
+- (void)didDismissMemberSelection:(id)arg1 { %log; %orig; }
+- (void)didEndPublishMessageAnimation:(id)arg1 { %log; %orig; }
+- (void)didEndScroll:(id)arg1 { %log; %orig; }
+- (void)didGroupApplicationEnterBackground:(id)arg1 { %log; %orig; }
+- (void)didGroupApplicationEnterForeground:(id)arg1 { %log; %orig; }
+- (void)didPressReturnKey { %log; %orig; }
+- (void)didSelectFileList:(id)arg1 photoList:(id)arg2 bNearFile:(_Bool)arg3 { %log; %orig; }
+- (void)didSelectReloadImage:(id)arg1 { %log; %orig; }
+- (void)didSelectSystemNotificationCell:(id)arg1 { %log; %orig; }
+- (void)didSelectedSendFlwMember:(id)arg1 { %log; %orig; }
+- (void)didSendGroupChatImage { %log; %orig; }
+- (void)didSendMessageByPressEmotionSendReturnKey { %log; %orig; }
+- (void)didSendMessageByPressReturnKey { %log; %orig; }
+- (void)didStartPublishMessageAnimation:(id)arg1 { %log; %orig; }
+- (void)didTouchInTabelView:(id)arg1 { %log; %orig; }
+- (void)didTouchRichKeyBorad:(id)arg1 withControl:(id)arg2 forEvent:(id)arg3 { %log; %orig; }
+- (void)dismissChatViewBarWithUin:(id)arg1 { %log; %orig; }
+- (void)displayTipInAIO:(id)arg1 msgType:(int)arg2 groupCode:(id)arg3 { %log; %orig; }
+// - (void)displayTipInAIO:(id)arg1 msgType:(int)arg2 groupCode:(id)arg3 { %log; %orig; }
+- (void)downLoadGroupImg:(id)arg1 isRefresh:(_Bool)arg2 { %log; %orig; }
+- (int)emojiStringLength:(id)arg1 { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)endDisplayCell:(id)arg1 forRowAtIndexPath:(id)arg2 byUser:(_Bool)arg3 { %log; %orig; }
+// - (void)setEnterAnimationView:(MLAPlayerView *)enterAnimationView { %log; %orig; }
+// - (MLAPlayerView *)enterAnimationView { %log; MLAPlayerView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)enterAnonymousMode { %log; %orig; }
+- (void)fillAtAllData:(long long)arg1 viewText:(id)arg2 nickName:(id)arg3 { %log; %orig; }
+- (void)fillAtAllGroupMemArr:(_Bool)arg1 cursorLocation:(long long)arg2 viewText:(id)arg3 { %log; %orig; }
+- (void)fillAtGroupData:(id)arg1 cursorLocation:(unsigned long long)arg2 viewText:(id)arg3 memUin:(unsigned int)arg4 ifLongPress:(_Bool)arg5 { %log; %orig; }
+- (void)fillAtGroupData:(id)arg1 memUin:(unsigned int)arg2 { %log; %orig; }
+- (void)fillAtGroupMemArr:(_Bool)arg1 troopMemDic:(id)arg2 cursorLocation:(long long)arg3 viewText:(id)arg4 { %log; %orig; }
+- (void)fillAtGroupMemArrForClearText:(id)arg1 memUin:(unsigned int)arg2 viewText:(id)arg3 { %log; %orig; }
+- (void)fillAtGroupMemArrForLongPress:(id)arg1 memUin:(unsigned int)arg2 cursorLocation:(int)arg3 viewText:(id)arg4 { %log; %orig; }
+- (void)fillAtGroupMemArrForNearByGroupFriend:(id)arg1 memUin:(unsigned int)arg2 viewText:(id)arg3 { %log; %orig; }
+- (void)fillAtGroupMemArrForReply:(id)arg1 { %log; %orig; }
+- (void)fillAtGroupMemNick:(id)arg1 memberUin:(long long)arg2 andText:(id)arg3 { %log; %orig; }
+- (void)fillAtGroupMemNick:(id)arg1 memberUin:(long long)arg2 cursorLocation:(long long)arg3 viewText:(id)arg4 becomeFirstResponder:(_Bool)arg5 { %log; %orig; }
+- (void)fillAtGroupMemNick:(id)arg1 memberUin:(long long)arg2 replaceAllText:(_Bool)arg3 { %log; %orig; }
+- (void)fillAtGroupMemNick:(id)arg1 memberUin:(long long)arg2 replaceAllText:(_Bool)arg3 becomeFirstResponder:(_Bool)arg4 { %log; %orig; }
+- (void)fillAtGroupMemWithAioModel:(id)arg1 { %log; %orig; }
+- (id)generateMessageModelByUuid:(id)arg1 picInfo:(id)arg2 bodyType:(int)arg3 saveMsg:(_Bool)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)generateMessageModelByUuid:(id)arg1 picInfo:(id)arg2 bodyType:(int)arg3 saveMsg:(_Bool)arg4 content:(id)arg5 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getArkAppModelWithArkUIView:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getChatViewUin { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getContentNotifyControl { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (int)getExpireTimeString:(unsigned int)arg1 { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getGroupAudioChatingMember { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)getGroupAudioTipsContent { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (long long)getGroupMemberSeq { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (id)getGroupMemberUinList { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (long long)getLimitMaxMsgCellCount { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (double)getMaxY { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (int)getMemberStateWithUpdate:(_Bool)arg1 { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (id)getNoticeCenterControl { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (double)getNotifyControlInitOriginY { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)getRandVideoFileName { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)getRoamMsgFromSeq:(unsigned long long)arg1 end:(unsigned long long)arg2 { %log; %orig; }
+- (id)getTextFieldShutupTimeString:(unsigned int)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)getTheFlagOfTheNewComerGuideForGroupCode:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (long long)getTimeLast { %log; long long r = %orig; HBLogDebug(@" = %lld", r); return r; }
+- (int)getTipTag { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (double)getTopNotifyControlBottomOffset { %log; double r = %orig; HBLogDebug(@" = %f", r); return r; }
+- (id)getTopicConfigModel { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setGiftInteractButton:(UIView *)giftInteractButton { %log; %orig; }
+- (UIView *)giftInteractButton { %log; UIView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)gotoQuoteMsgBySeq:(long long)arg1 { %log; %orig; }
+- (void)gotoSeq:(long long)arg1 { %log; %orig; }
+- (void)groupAioMsgSettingSucced:(id)arg1 { %log; %orig; }
+- (void)groupDidFollowUpstairsWithSimpleText:(id)arg1 { %log; %orig; }
+- (void)groupDidFollowUpstairsWithSpriteActionModel:(id)arg1 { %log; %orig; }
+- (void)groupEndScrollBySetContenOffset:(id)arg1 { %log; %orig; }
+- (void)groupGiftSelectionViewDidSelect { %log; %orig; }
+- (void)groupNoticeCenterGestureWithUp { %log; %orig; }
+// - (void)setGroupNoticeCenterMaskView:(QQGroupNoticeCenterMaskView *)groupNoticeCenterMaskView { %log; %orig; }
+// - (QQGroupNoticeCenterMaskView *)groupNoticeCenterMaskView { %log; QQGroupNoticeCenterMaskView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)groupOpenAPPListUpdated:(id)arg1 error:(id)arg2 { %log; %orig; }
+- (void)groupRankLabelTouch:(id)arg1 clkUin:(id)arg2 clkNick:(id)arg3 isDeliverGiftFlag:(_Bool)arg4 source:(id)arg5 { %log; %orig; }
+- (void)setGroupRobotNickName:(NSString *)groupRobotNickName { %log; %orig; }
+- (NSString *)groupRobotNickName { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setGroupRobotUIN:(unsigned long long )groupRobotUIN { %log; %orig; }
+- (unsigned long long )groupRobotUIN { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (void)groupShareLinkLike:(id)arg1 { %log; %orig; }
+- (void)groupTitleOrNickLabelTouch:(id)arg1 targetUin:(id)arg2 targetNick:(id)arg3 targetType:(int)arg4 source:(id)arg5 { %log; %orig; }
+- (_Bool)handleGroupAVBannerButtonClick:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)handleGroupAVTipsDismiss { %log; %orig; }
+- (void)handleGroupMessageSilent:(id)arg1 userInfo:(id)arg2:(id)arg3:(long long)arg4 { %log; %orig; }
+- (void)handleRenewSpecialTitle:(id)arg1 { %log; %orig; }
+- (void)handleSetGroupMemberSpecialTitleResult:(id)arg1 { %log; %orig; }
+- (void)handleUpdateSpecialTitleDone:(id)arg1 { %log; %orig; }
+- (_Bool)hanleGroupAVBannerTipViewClick:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)hasRedPoint { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)headIconTouch:(id)arg1 { %log; %orig; }
+- (void)headIconTouchWithModel:(id)arg1 { %log; %orig; }
+- (void)initAnonymous { %log; %orig; }
+- (void)initGroup:(id)arg1 { %log; %orig; }
+- (void)initGroupMemberShutupLogic { %log; %orig; }
+- (void)initGroupUploadRights { %log; %orig; }
+- (void)initGroupVideo { %log; %orig; }
+- (void)initNtCenterView:(double)arg1 { %log; %orig; }
+- (void)initShareLocationGroup { %log; %orig; }
+- (void)initShutupTextLabel { %log; %orig; }
+- (id)initWithCertainMsg:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)initWithuin:(id)arg1 isGroup:(_Bool)arg2 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)inputbarItemsForRobot:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)insertPreuploadImageMessage:(id)arg1 preuploadState:(unsigned long long)arg2 { %log; %orig; }
+- (_Bool)isHotChat { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isNotifyGroupNotice:(int)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isNotifyRemindMsg { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setIsOnlineMemberViewDragging:(_Bool )isOnlineMemberViewDragging { %log; %orig; }
+- (_Bool )isOnlineMemberViewDragging { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isOrganizedGroup { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isSelfShutup { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isShowingGroupRibbon { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setIsShowingOnlineMemberTitle:(_Bool )isShowingOnlineMemberTitle { %log; %orig; }
+- (_Bool )isShowingOnlineMemberTitle { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isSupportRightDragToGoBack { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)isVideoExist { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)itemIsRenewing:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)judgeIfShowCompleteInfoTips { %log; %orig; }
+- (void)jumpToSettingEffectWeb { %log; %orig; }
+- (void)jumpToVideoDetail:(id)arg1 aioModel:(id)arg2 { %log; %orig; }
+- (void)layoutCustomTitleForLimitWidth:(int)arg1 { %log; %orig; }
+- (void)layoutGroupUnreadNotifyControlIfNeeded { %log; %orig; }
+- (void)leftButtonClick:(id)arg1 { %log; %orig; }
+- (void)likeGroupTopic:(id)arg1 { %log; %orig; }
+- (void)loadView { %log; %orig; }
+- (void)lockTextField { %log; %orig; }
+- (unsigned long long)maxRequstCount { %log; unsigned long long r = %orig; HBLogDebug(@" = %llu", r); return r; }
+// - (void)setMsgCache:(QQGroupMsgCache *)msgCache { %log; %orig; }
+// - (QQGroupMsgCache *)msgCache { %log; QQGroupMsgCache * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)nameForUinInGroup:(id)arg1 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (_Bool)needClearRobotFlag { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)normalGroupCanRequest { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)noticeSwitchGroupRightButton:(id)arg1 { %log; %orig; }
+- (void)notifyGroupGuideMessageDeleted:(id)arg1 { %log; %orig; }
+- (void)notifyGroupGuideMessageExist:(id)arg1 { %log; %orig; }
+// - (void)setOldGroupChatViewParam:(QQGroupChatViewAnonymousUIParam *)oldGroupChatViewParam { %log; %orig; }
+// - (QQGroupChatViewAnonymousUIParam *)oldGroupChatViewParam { %log; QQGroupChatViewAnonymousUIParam * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)onAllMemberShutupPush:(id)arg1 { %log; %orig; }
+- (void)onAnonymousGroupMemberShutupPush:(id)arg1 { %log; %orig; }
+- (void)onBannerTipViewShow:(id)arg1 { %log; %orig; }
+- (void)onBusinessProcessWithSelectedMems:(id)arg1 currentViewControllerClass:(id)arg2 currentViewController:(id)arg3 { %log; %orig; }
+- (void)onChatViewBeginScroll:(id)arg1 { %log; %orig; }
+- (void)onClickNewMsg { %log; %orig; }
+- (void)onContentNotify:(id)arg1 { %log; %orig; }
+- (void)onDeleteMessage:(id)arg1 { %log; %orig; }
+- (void)onFakeGroupAblumUploadPhotoAIONotify:(id)arg1 { %log; %orig; }
+- (void)onGotoUnreadMsg { %log; %orig; }
+- (void)onGroupAdminSetOrUnSetNotify:(id)arg1 { %log; %orig; }
+- (void)onGroupAlbumNoticePush:(id)arg1 { %log; %orig; }
+- (void)onGroupDidEnterBackground { %log; %orig; }
+- (void)onGroupDidEnterForeground { %log; %orig; }
+- (void)onGroupInfoNotify:(id)arg1 { %log; %orig; }
+- (void)onGroupMemberShutupPush:(id)arg1 { %log; %orig; }
+- (void)onGroupNoticeCenterClickNotice:(id)arg1 { %log; %orig; }
+- (void)onGroupNotifyFlagPush:(id)arg1 { %log; %orig; }
+- (void)onGroupSettingViewControllerPopped:(id)arg1 { %log; %orig; }
+- (void)onGroupShareViewButtonClick:(id)arg1 { %log; %orig; }
+- (void)onGroupTableViewScroll { %log; %orig; }
+- (void)onGroupTipsPush:(id)arg1 { %log; %orig; }
+- (void)onGroupUploadRightsPush:(id)arg1 { %log; %orig; }
+- (void)onHomeworkGroup:(id)arg1 { %log; %orig; }
+- (void)onInviteJoinGroupNotification:(id)arg1 { %log; %orig; }
+- (void)onMsgMultiTaskStart:(id)arg1 { %log; %orig; }
+- (void)onNewMsgComeNoScroll:(id)arg1 { %log; %orig; }
+- (void)onNoticeTipViewShow:(id)arg1 { %log; %orig; }
+- (void)onOpenGroupHomeworkIdentityCard:(id)arg1 { %log; %orig; }
+- (void)onQQGroupAlbumNoticePull:(id)arg1 { %log; %orig; }
+- (void)onQQGroupAlbumNoticePullFail:(id)arg1 { %log; %orig; }
+- (void)onQQGroupNoticeCenterDelFeedsPush:(id)arg1 { %log; %orig; }
+- (void)onQuitGroupAnonymous { %log; %orig; }
+- (void)onReceiveAioNotification:(id)arg1 { %log; %orig; }
+- (void)onReceiveRecallMsg:(id)arg1 { %log; %orig; }
+- (void)onRedPointNotification:(id)arg1 { %log; %orig; }
+- (void)onRequestGroupBeginnerGuideMsgTimeout { %log; %orig; }
+- (_Bool)onSelectInviteGroupMembers:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)onSelfShutupPush:(id)arg1 { %log; %orig; }
+- (void)onShareGroupNotification:(id)arg1 { %log; %orig; }
+- (void)onStartPopping:(id)arg1 { %log; %orig; }
+- (void)onTableViewFrameChange:(struct CGRect)arg1 { %log; %orig; }
+- (void)onTimer { %log; %orig; }
+- (void)onTroopInfoUpdated:(id)arg1 { %log; %orig; }
+- (void)onUserAnonymousInfoChangedNotification:(id)arg1 { %log; %orig; }
+- (void)onUserAnonymousModeResponseWithSeq:(int)arg1 model:(id)arg2 { %log; %orig; }
+- (void)openGameTeam { %log; %orig; }
+- (void)openGroupOrganization { %log; %orig; }
+- (void)openGroupSubscription { %log; %orig; }
+- (void)openGroupTribeTopic:(id)arg1 { %log; %orig; }
+- (void)openGroupTribeTopicWithContent:(id)arg1 { %log; %orig; }
+- (void)openGroupVote { %log; %orig; }
+- (void)setPerfAIOOpenTime:(NSDate *)perfAIOOpenTime { %log; %orig; }
+- (NSDate *)perfAIOOpenTime { %log; NSDate * r = %orig; HBLogDebug(@" = %@", r); return r; }
+// - (void)playFlashPictureWithImage:(id)arg1 effectID:(long long)arg2 finishBlock:(CDUnknownBlockType)arg3 { %log; %orig; }
+// - (void)playFlashVideoWithImage:(id)arg1 effectID:(long long)arg2 finishBlock:(CDUnknownBlockType)arg3 { %log; %orig; }
+- (void)playVideoInGroupAIO:(id)arg1 groupCode:(id)arg2 { %log; %orig; }
+- (void)popUpTipsOfSetShareLocationInRichKeyBoard:(id)arg1 { %log; %orig; }
+- (void)popViewController { %log; %orig; }
+- (void)prepareForRobotMessage:(id)arg1 { %log; %orig; }
+- (void)prepareToCheckNotifyMsg { %log; %orig; }
+- (id)prepareUploadImageByUuid:(id)arg1 picInfo:(id)arg2 bodyType:(int)arg3 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)prepareUploadImageByUuid:(id)arg1 picInfo:(id)arg2 bodyType:(int)arg3 content:(id)arg4 { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (id)publishContent { %log; id r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)pushGroupMemViewController:(id)arg1 selectedLocation:(long long)arg2 { %log; %orig; }
+- (void)quitMessageMoreStateForGroup:(id)arg1 { %log; %orig; }
+- (void)quiteAnonymousInputbar { %log; %orig; }
+- (void)quiteAnonymousRichKeyBoard { %log; %orig; }
+- (void)quoteMsgStructViewClicked:(id)arg1 { %log; %orig; }
+- (void)reSetLeftButtonTitle { %log; %orig; }
+- (void)reSetSpecialMsgNotify:(long long)arg1 senderUin:(id)arg2 { %log; %orig; }
+- (void)receiveGroupFileMessageDidAddNotification:(id)arg1 { %log; %orig; }
+- (void)receiveGroupFileMessageDidRemoveNotification:(id)arg1 { %log; %orig; }
+- (void)receiveWeiyunFileForwardNotification:(id)arg1 { %log; %orig; }
+- (void)recieveGroupRobotKeywords:(id)arg1 robotUIN:(unsigned long long)arg2 { %log; %orig; }
+- (void)registerGroupAIOTimeReporter { %log; %orig; }
+- (void)removeRedPointFromRightBtn { %log; %orig; }
+- (void)removeSpecialSeq:(long long)arg1 { %log; %orig; }
+- (void)replaceMoreItemWithRobotPanelItem { %log; %orig; }
+- (void)replaceRobotPanelItemWithMoreItem { %log; %orig; }
+- (void)reporGroupAIOTime:(_Bool)arg1 { %log; %orig; }
+- (void)reportReadClick:(id)arg1 { %log; %orig; }
+- (void)reportUploadFile:(unsigned long long)arg1 { %log; %orig; }
+- (void)requestRoamMsgSilent { %log; %orig; }
+- (void)requestTroopMemRemark:(unsigned long long)arg1 groupCode:(unsigned long long)arg2 { %log; %orig; }
+- (void)reset2LineTitleView:(float)arg1 custmViewWidth:(float)arg2 line1OffsetY:(float)arg3 { %log; %orig; }
+- (void)resetCompressBatchId { %log; %orig; }
+- (void)resetCustomTitleView { %log; %orig; }
+- (void)resetViewControllerTitle { %log; %orig; }
+- (void)restoreAnonymousModeUIBackground:(_Bool)arg1 { %log; %orig; }
+- (void)restoreAnonymousModeUILeftBntImage { %log; %orig; }
+- (void)restoreAnonymousModeUIRightBntImage { %log; %orig; }
+- (void)restoreAnonymousModeUITwoLineTitle { %log; %orig; }
+- (void)restoreNavBarNorMode:(_Bool)arg1 { %log; %orig; }
+- (void)restoreNorUI:(_Bool)arg1 { %log; %orig; }
+- (void)restoreUIColor { %log; %orig; }
+// - (void)setRobotKeywordManager:(QQGroupRobotKeywordManager *)robotKeywordManager { %log; %orig; }
+// - (QQGroupRobotKeywordManager *)robotKeywordManager { %log; QQGroupRobotKeywordManager * r = %orig; HBLogDebug(@" = %@", r); return r; }
+// - (void)setRobotKeywordsView:(QQGroupRobotKeywordView *)robotKeywordsView { %log; %orig; }
+// - (QQGroupRobotKeywordView *)robotKeywordsView { %log; QQGroupRobotKeywordView * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)saveTextInputCacheWithChatModelType:(int)arg1 { %log; %orig; }
+- (void)scrollToArkModel { %log; %orig; }
+- (void)sendAddAccpetedMsgReadConfirm { %log; %orig; }
+- (_Bool)sendCommentText:(id)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)sendForwardImages:(id)arg1 chatType:(long long)arg2 { %log; %orig; }
+- (void)sendForwardImages:(id)arg1 isGroup:(_Bool)arg2 { %log; %orig; }
+- (void)sendGroupRobotKeyword:(id)arg1 needFlag:(_Bool)arg2 { %log; %orig; }
+- (void)sendGroupRobotKeywordToServer:(id)arg1 { %log; %orig; }
+- (void)sendGroupTopicComment:(id)arg1 msg:(unsigned long long)arg2 msgRandom:(unsigned long long)arg3 sendText:(id)arg4 extroInfo:(id)arg5 { %log; %orig; }
+- (void)sendLocalFileToTargetService:(id)arg1 { %log; %orig; }
+- (void)sendMarketFaceMsgFromShare:(id)arg1 { %log; %orig; }
+- (void)sendReadConfirm { %log; %orig; }
+- (void)sendTextFromShare:(id)arg1 { %log; %orig; }
+- (void)sendVideoFile:(id)arg1 { %log; %orig; }
+- (void)setAIOAllMemberShutup { %log; %orig; }
+- (void)setAIOSelfShutup { %log; %orig; }
+- (void)setAnonymousInputbar { %log; %orig; }
+- (void)setAnonymousModeUIAnimated:(_Bool)arg1 { %log; %orig; }
+- (void)setAnonymousModeUIBackground:(_Bool)arg1 { %log; %orig; }
+- (void)setAnonymousModeUIColor { %log; %orig; }
+- (void)setAnonymousModeUILeftBntImage { %log; %orig; }
+- (void)setAnonymousModeUIRightBntImage { %log; %orig; }
+- (void)setAnonymousModeUITwoLineTitle { %log; %orig; }
+- (void)setAnonymousRichKeyBoard { %log; %orig; }
+- (void)setChatViewCover { %log; %orig; }
+- (void)setControllerTitle:(id)arg1 { %log; %orig; }
+- (void)setNavBarAnonymousMode:(_Bool)arg1 { %log; %orig; }
+- (void)setNeedClearRobotFlag:(_Bool)arg1 { %log; %orig; }
+- (void)setNotifyButtonState { %log; %orig; }
+- (void)setRecordModelDetailAndSave:(id)arg1 { %log; %orig; }
+- (void)setShouldShowIndicator:(_Bool )shouldShowIndicator { %log; %orig; }
+- (_Bool )shouldShowIndicator { %log; _Bool  r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)setSpecialTitleSetSeq:(NSMutableDictionary *)specialTitleSetSeq { %log; %orig; }
+- (NSMutableDictionary *)specialTitleSetSeq { %log; NSMutableDictionary * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (void)setTemporaryForbidGroupFlag:(_Bool)arg1 { %log; %orig; }
+- (void)setupInputbarItems { %log; %orig; }
+- (void)setupRichAIOKeypadEntries { %log; %orig; }
+- (_Bool)shouldAnimationScrollEnabel { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)shouldAppendAtTextWithFlag:(_Bool)arg1 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)showAioMsgSettingTipsIfNeed { %log; %orig; }
+- (void)showAioTipOnAllMemberShutup:(id)arg1 { %log; %orig; }
+- (void)showAioTipOnSelfShutup:(id)arg1 { %log; %orig; }
+- (void)showAlertIfNeededForCreditLevel { %log; %orig; }
+- (void)showBlockTipsIfNeed { %log; %orig; }
+- (void)showChatViewBarTitle:(id)arg1 icon:(id)arg2 chatViewUin:(id)arg3 { %log; %orig; }
+- (void)showChatViewNotify:(long long)arg1 notifyTitle:(id)arg2 notifyContent:(id)arg3 senderUin:(id)arg4 headImgUrl:(id)arg5 click:(id)arg6 { %log; %orig; }
+- (void)showChatViewNotify:(long long)arg1 notifyTitle:(id)arg2 notifyContent:(id)arg3 senderUin:(id)arg4 headImgUrl:(id)arg5 click:(id)arg6 userData:(id)arg7 { %log; %orig; }
+- (void)showChatViewNotifyForMsgKeyword:(id)arg1 { %log; %orig; }
+- (void)showGrayTips:(id)arg1 { %log; %orig; }
+- (void)showGreetingView:(id)arg1 { %log; %orig; }
+- (void)showGroupAssistantChatTip { %log; %orig; }
+- (void)showGroupNotice { %log; %orig; }
+- (void)showGroupNoticeMaskView:(_Bool)arg1 { %log; %orig; }
+- (void)showGroupNoticeView { %log; %orig; }
+- (void)showGroupPushTipsWithNotification:(id)arg1 { %log; %orig; }
+- (void)showKeyboard:(id)arg1 { %log; %orig; }
+- (void)showKeyboardForVoice:(id)arg1 { %log; %orig; }
+- (void)showNewComerGuide { %log; %orig; }
+- (void)showPopupMenu0 { %log; %orig; }
+- (void)showPublicAccountSetting:(unsigned long long)arg1 { %log; %orig; }
+- (void)showReplyShortNoticeView:(id)arg1 iconType:(long long)arg2 parentView:(id)arg3 { %log; %orig; }
+- (void)showRightButtonRedPoint:(_Bool)arg1 isNotice:(_Bool)arg2 isInfo:(_Bool)arg3 { %log; %orig; }
+- (void)showRobotKeywordPanel { %log; %orig; }
+- (void)showShortNoticeView:(id)arg1 iconType:(long long)arg2 parentView:(id)arg3 { %log; %orig; }
+- (void)showTopTips { %log; %orig; }
+- (void)showTribeShortNoticeView:(id)arg1 iconType:(long long)arg2 parentView:(id)arg3 { %log; %orig; }
+- (void)showUnreadNotify { %log; %orig; }
+- (_Bool)silentReqTaskDone { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)silentRequstTaskTimeout { %log; %orig; }
+- (void)simpleAlertViewDismiss:(id)arg1 { %log; %orig; }
+- (void)startRefresh:(id)arg1 { %log; %orig; }
+- (void)stopGroupVideo { %log; %orig; }
+- (void)stopPlayFlashPicture { %log; %orig; }
+- (void)switchAnonymousModeUIRightBntImage:(_Bool)arg1 { %log; %orig; }
+- (void)switchGroupRightButton { %log; %orig; }
+- (_Bool)textView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)textViewDidChange:(id)arg1 { %log; %orig; }
+- (void)textViewDidChangeForAt:(id)arg1 { %log; %orig; }
+- (void)textViewDidChangeForFlower:(id)arg1 { %log; %orig; }
+- (void)textViewDidChangeForTribeTopic:(id)arg1 { %log; %orig; }
+- (void)textViewDidChangeSelection:(id)arg1 { %log; %orig; }
+- (void)textViewDidChangeSelectionForAt:(id)arg1 { %log; %orig; }
+- (_Bool)textViewForAt:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)textViewForFlower:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (_Bool)textViewForTribeTopic:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3 { %log; _Bool r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)tribePublishDone:(id)arg1 { %log; %orig; }
+- (void)unInitGroupMemberShutupLogic { %log; %orig; }
+- (void)uninitGroup { %log; %orig; }
+- (void)uninitGroupUploadRights { %log; %orig; }
+- (void)uninitGroupVideo { %log; %orig; }
+- (void)uninitShareLocationGroup { %log; %orig; }
+- (void)unlockTextField { %log; %orig; }
+- (void)updateIfNeededForCreditLevel { %log; %orig; }
+- (void)updateTopicConfig { %log; %orig; }
+- (void)videoQQAIOShareMessageCellDidAction:(id)arg1 aioModel:(id)arg2 { %log; %orig; }
+- (void)viewDidAppear:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidDisappear:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidDisappearAnonymous:(_Bool)arg1 { %log; %orig; }
+- (void)viewDidLayoutSubviews { %log; %orig; }
+- (void)viewDidLoad { %log; %orig; }
+- (void)viewDidLoadAnonymous { %log; %orig; }
+- (int)viewTag { %log; int r = %orig; HBLogDebug(@" = %d", r); return r; }
+- (void)viewWillAppear:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillAppearAnonymous:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillAppearOperations { %log; %orig; }
+- (void)viewWillDisappear:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillDisappearAnonymous:(_Bool)arg1 { %log; %orig; }
+- (void)viewWillDisappearOperations { %log; %orig; }
+- (void)willDisplayCell:(id)arg1 forRowAtIndexPath:(id)arg2 byUser:(_Bool)arg3 { %log; %orig; }
+- (NSString *)debugDescription { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (NSString *)description { %log; NSString * r = %orig; HBLogDebug(@" = %@", r); return r; }
+- (unsigned long long )hash { %log; unsigned long long  r = %orig; HBLogDebug(@" = %llu", r); return r; }
+- (Class )superclass { %log; Class  r = %orig; HBLogDebug(@" = %@", r); return r; }
+%end
